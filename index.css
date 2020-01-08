@@ -1,0 +1,34 @@
+html,body{
+  padding: 0;
+  margin: 0;
+}
+body{
+  height: 100%;
+}
+
+#mainLoginBox{
+  margin-top: 100px;
+  border: 1px solid #D3D3D3;
+  border-radius: 10px;
+  height: 600px;
+  max-height: 700px;
+  width: 100%;
+}
+
+#mainLoginBoxRow{
+  height: 100%;
+}
+
+#imagePlacement{
+  width: 100%;
+  height: 100%;
+  /*position: relative;*/
+ 
+  background: url("woman.jpg") center no-repeat;
+  /*background: url('images/laptop.jpg');*/
+  /*background-image: linear-gradient(to right, purple, blue);*/
+  background-size: cover;
+  /*background-attachment: fixed;*/
+}
+
+
