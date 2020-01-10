@@ -1,0 +1,41 @@
+html,body{
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+
+
+body{
+  height: 100%;
+  width: 100%;
+  /*background: #D3D3D3;*/
+}
+#mainBanner{
+  background: url("../images/imagewoman.jpg") center  no-repeat;
+  width: 100%;
+  height: 100vh;
+  opacity: 0.8;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#firstContainer{
+  height: 200px;
+  justify-content: center;
+  max-height: 300px;
+  display: flex;
+  align-items: center;
+
+}
+
+#mainContainer{
+  /*height: 00%;*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#mainContainer h1{
+  color: black;
+}
+
