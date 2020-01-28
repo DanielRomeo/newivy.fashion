@@ -39,6 +39,7 @@
             }else{
 
                 // set the sessions and send them through:
+                $_SESSION['id'] = $db_id;
                 $_SESSION['firstname'] = $db_firstname;
                 $_SESSION['lastname'] = $db_lastname;
                 $_SESSION['email'] = $db_email;

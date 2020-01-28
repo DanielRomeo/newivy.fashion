@@ -21,21 +21,41 @@
 
 	/*_______________________________________________________*/
 
-	// $tbl_posts = "CREATE TABLE IF NOT EXISTS posts(
-	// 	id INT(11) NOT NULL AUTO_INCREMENT,
-	// 	title VARCHAR(16) NOT NULL,
-	// 	body VARCHAR(255) NOT NULL,
-	// 	uploaddate DATETIME NOT NULL,
-	// 	uploadedby VARCHAR(16) NOT NULL,
-	// 	PRIMARY KEY(id)
-	// 	)";
+	$tbl_posts = "CREATE TABLE IF NOT EXISTS posts(
+		id INT(11) NOT NULL AUTO_INCREMENT,
+		image VARCHAR(255) NOT NULL,
+		title VARCHAR(255) NOT NULL,
+		body LONGTEXT NOT NULL,
+		uploaddate DATETIME NOT NULL,
+		uploadedby VARCHAR(255) NOT NULL,
+		page_views INT(11) NOT NULL,
+		PRIMARY KEY(id)
+		)";
 
-	// $query = mysqli_query($db_conx, $tbl_posts);	
-	// if ($query === TRUE) {
-	// 	echo "posts TABLE Created  TRUE </br>";
-	// }else{
-	// 	echo " posts TABLE NOT CREATED FALSE </br>";
-	// }
+	$query = mysqli_query($db_conx, $tbl_posts);	
+	if ($query === TRUE) {
+		echo "posts TABLE Created  TRUE </br>";
+	}else{
+		echo " posts TABLE NOT CREATED FALSE </br>";
+	}
+
+	/* page views table: ::*/ // this reffers to alll the views ever:
+	$tbl_posts = "CREATE TABLE IF NOT EXISTS page_views(
+		id INT(11) NOT NULL AUTO_INCREMENT,
+		ip_address TEXT NOT NULL,
+		visit_date DATETIME NOT NULL,
+		post_id INT(11) NOT NULL,  
+		page_visited VARCHAR(255) NOT NULL,
+		PRIMARY KEY(id)
+		)";
+		
+
+	$query = mysqli_query($db_conx, $tbl_posts);	
+	if ($query === TRUE) {
+		echo "posts TABLE Created  TRUE </br>";
+	}else{
+		echo " posts TABLE NOT CREATED FALSE </br>";
+	}
 
 	/*______________________________________________________________________   friends*/
 

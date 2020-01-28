@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<title>NewIvyFashion!</title>
+	<title>NewIvy!</title>
 
 	<?php include_once("templates/head.php"); ?>
 </head>

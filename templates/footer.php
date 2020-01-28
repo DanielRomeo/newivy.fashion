@@ -62,38 +62,45 @@
 			<div class=" col-sm-4 col-md col-sm-4  col-12 col">
 				<h5 class="headin5_amrc col_white_amrc pt2">Find us</h5>
 				<!--headin5_amrc-->
-				<p class="mb10">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-				<p><i class="fa fa-location-arrow"></i> 9878/25 sec 9 rohini 35 </p>
-				<p><i class="fa fa-phone"></i>  +91-9999878398  </p>
-				<p><i class="fa fa fa-envelope"></i> info@example.com  </p>
+				<p class="mb10">NEWIVY.FASHION is an authorised fashion retailer.</p>
+				<p><i class="fa fa fa-envelope"></i> newivyfashion@gmail.com  </p>
 			</div>
 
 
 			<div class=" col-sm-4 col-md  col-6 col">
 				<h5 class="headin5_amrc col_white_amrc pt2">Quick links</h5>
-				<!--headin5_amrc-->
+				
 				<ul class="footer_ul_amrc">
-				<li><a href="http://webenlance.com">Image Rectoucing</a></li>
-				<li><a href="http://webenlance.com">Clipping Path</a></li>
-				<li><a href="http://webenlance.com">Hollow Man Montage</a></li>
-				<li><a href="http://webenlance.com">Ebay & Amazon</a></li>
-				<li><a href="http://webenlance.com">Hair Masking/Clipping</a></li>
-				<li><a href="http://webenlance.com">Image Cropping</a></li>
+				<li><a href="http://webenlance.com">Home </a></li>
+				<li><a href="http://webenlance.com">about</a></li>
+				<li><a href="http://webenlance.com">Blog</a></li>
+				<li><a href="http://webenlance.com">Register to become a retailer</a></li>
 				</ul>
-				<!--footer_ul_amrc ends here-->
 			</div>
 
 
 			<div class=" col-sm-4 col-md  col-6 col">
-				<h5 class="headin5_amrc col_white_amrc pt2">Quick links</h5>
-				<!--headin5_amrc-->
+				<h5 class="headin5_amrc col_white_amrc pt2">Latest blog posts</h5>
+
 				<ul class="footer_ul_amrc">
-				<li><a href="http://webenlance.com">Remove Background</a></li>
-				<li><a href="http://webenlance.com">Shadows & Mirror Reflection</a></li>
-				<li><a href="http://webenlance.com">Logo Design</a></li>
-				<li><a href="http://webenlance.com">Vectorization</a></li>
-				<li><a href="http://webenlance.com">Hair Masking/Clipping</a></li>
-				<li><a href="http://webenlance.com">Image Cropping</a></li>
+
+					<?php 
+						include_once("../includes/db_conx.php");
+
+						$sql = "SELECT * FROM posts LIMIT 5";
+						$query = mysqli_query($db_conx, $sql);
+						if(mysqli_num_rows($query) > 0){
+							while($var = mysqli_fetch_assoc($query)){
+
+								$postId = $var['id'];
+								$postTitle = $var['title'];
+								
+
+								echo  " <p> <a href='localhost/newivy.fashion/blog/post.php?data=".$postId." '> $postTitle </a> </p>";
+							}
+						}
+					?>
+					
 				</ul>
 				<!--footer_ul_amrc ends here-->
 			</div>
@@ -139,3 +146,4 @@
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+

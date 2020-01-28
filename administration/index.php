@@ -1,12 +1,41 @@
 <?php
 session_start();
+
+	ini_set('display_errors', 1);
+	ini_set('display_startup_errors', 1);
+	error_reporting(E_ALL);
+	include_once("../includes/db_conx.php");
   
-   	if(isset($_SESSION["email"])){
+   	if(isset($_SESSION["email"]) && isset($_SESSION['id'])){
         // the user is logged in:
+        $yourEmail = $_SESSION["email"];
+        $id = $_SESSION['id'];
+
+   		
+
     }else{
     	// user is not logged in and must be evacuated:
     	header("Location: login.php");
     }
+
+    // scripts to get that statistics:
+
+    // get number of blog posts:
+    $sql = "SELECT * FROM posts ";
+    $query = mysqli_query($db_conx, $sql);
+    $numberOfBlogPosts = mysqli_num_rows($query);
+
+    // get number of users:
+    $sql = "SELECT * FROM users ";
+    $query = mysqli_query($db_conx, $sql);
+    $numberOfBloggers = mysqli_num_rows($query);
+
+    // number of blog posts the user wrote:
+    $sql = "SELECT * FROM posts WHERE uploadedby='$id'  ";
+    $query = mysqli_query($db_conx, $sql);
+    $numberOfPostsYouMade = mysqli_num_rows($query);
+
+
 ?>
 
 <!DOCTYPE html>
@@ -15,6 +44,9 @@ session_start();
 <head>
   <title>NEWIVY! @ <?php echo $_SESSION["firstname"]; ?></title>
   <?php include_once("includes/head.php"); ?>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  	
 </head>
 
 <body id="page-top">
@@ -76,7 +108,7 @@ session_start();
 
       <!-- Nav Item - Pages Collapse Menu -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-target="" aria-expanded="true" aria-controls="">
+        <a class="nav-link collapsed" href="create.php" data-target="" aria-expanded="true" aria-controls="">
           <i class="fas fa-fw fa-cog"></i>
           <span>Create a blog post</span>
         </a>
@@ -178,7 +210,7 @@ session_start();
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
                       <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Number of blog posts</div>
-                      <div class="h5 mb-0 font-weight-bold text-gray-800">5</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $numberOfBlogPosts; ?></div>
                     </div>
                     <div class="col-auto">
                       <i class="fas fa-calendar fa-2x text-gray-300"></i>
@@ -194,8 +226,8 @@ session_start();
                 <div class="card-body">
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Total number of views</div>
-                      <div class="h5 mb-0 font-weight-bold text-gray-800">200</div>
+                      <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Total number of website views</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800"></div>
                     </div>
                     <div class="col-auto">
                       <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
@@ -214,7 +246,7 @@ session_start();
                       <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Number of views this month</div>
                       <div class="row no-gutters align-items-center">
                         <div class="col-auto">
-                          <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">17</div>
+                          <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800"></div>
                         </div>
                         <div class="col">
                           <div class="progress progress-sm mr-2">
@@ -238,7 +270,7 @@ session_start();
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
                       <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Total number of bloggers</div>
-                      <div class="h5 mb-0 font-weight-bold text-gray-800">3</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $numberOfBloggers ?></div>
                     </div>
                     <div class="col-auto">
                       <i class="fas fa-comments fa-2x text-gray-300"></i>
@@ -269,7 +301,7 @@ session_start();
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
                       <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Number of blog posts you wrote:</div>
-                      <div class="h5 mb-0 font-weight-bold text-gray-800">5</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $numberOfPostsYouMade ?></div>
                     </div>
                    
                   </div>
@@ -277,11 +309,63 @@ session_start();
               </div>
             </div>
 
-        </div>    
+        	</div> 
 
 
-        </div>
-        <!-- /.container-fluid -->
+        	<hr>   
+
+			<!-- Page second heading -->
+			<div class="d-sm-flex align-items-center justify-content-between mb-4">
+			<h1 class="h3 mb-0 text-gray-800">Top bloggers on the New Ivy</h1>
+				
+			<!-- <p>your personal statistics will go here</p> -->
+			</div>
+
+			<div class="row">
+
+				<?php
+
+					// find out how i can get te number of posts they posted:
+
+					$sql = "SELECT * FROM users ";
+					$query = mysqli_query($db_conx, $sql);
+					if(mysqli_num_rows($query) > 0){
+						while($var = mysqli_fetch_assoc($query)){
+
+							$id = $var['id'];
+							$firstname = $var['firstname'];
+							$lastname = $var['lastname'];
+							
+							
+							echo '
+								<div class="col-xl-3 col-md-6 mb-4">
+								  <div class="card border-left-primary shadow h-100 py-2">
+								    <div class="card-body">
+								      <div class="row no-gutters align-items-center">
+								        <div class="col mr-2">
+								          <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">'.$firstname.' '.$lastname.'</div>
+								          <div class="h5 mb-0 font-weight-bold text-gray-800"></div>
+								        </div>
+								       
+								      </div>
+								    </div>
+								  </div>
+								</div>
+					      	';
+						}
+					}
+
+				?>
+
+
+			
+
+			</div> 
+
+
+        </div><!-- /.container-fluid -->
+
+
 
       </div>
       <!-- End of Main Content -->
