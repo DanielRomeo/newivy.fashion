@@ -1,6 +1,13 @@
 <?php
 session_start();
 
+	/*
+		
+		note: when editing post we send the get variable -> id , eg edit.php?id='1'
+
+
+	*/
+
 	ini_set('display_errors', 1);
 	ini_set('display_startup_errors', 1);
 	error_reporting(E_ALL);
@@ -35,6 +42,28 @@ session_start();
     $query = mysqli_query($db_conx, $sql);
     $numberOfPostsYouMade = mysqli_num_rows($query);
 
+    // get total number of website views:
+
+    // i just realsised that i have to count here:
+
+    $numberOfWebsiteViews = 0;
+    $sql = "SELECT * FROM posts ";
+     $query = mysqli_query($db_conx, $sql);
+     //$query = mysqli_num_rows($query);
+     if(mysqli_num_rows($query) > 0){
+        while($var = mysqli_fetch_assoc($query)){
+
+			$postId = $var['id'];
+			//$postimage = $['image'];
+			$postTitle = $var['title'];
+			$postbody = $var['body'];
+			$postuploaddate = $var['uploaddate'];
+			$postuploadedby = $var['uploadedby'];
+			$postpageviews = $var['page_views'];
+
+			$numberOfWebsiteViews += $postpageviews;
+      	}
+    }      
 
 ?>
 
@@ -227,7 +256,7 @@ session_start();
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
                       <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Total number of website views</div>
-                      <div class="h5 mb-0 font-weight-bold text-gray-800"></div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $numberOfWebsiteViews; ?></div>
                     </div>
                     <div class="col-auto">
                       <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
@@ -347,24 +376,19 @@ session_start();
                             <div class="h5 mb-0 font-weight-bold text-gray-800"></div>
                           </div> <br />
 
-                          <a href="#" class="btn btn-warning btn-sm">Update</a>
-                          <a href="#" class="btn btn-danger btn-sm" >Delete</a>
+                          <a href="edit.php?='.$postId.'" class="btn btn-warning btn-sm">Update</a>
+                          <a href="delete.php?='.$postId.'" class="btn btn-danger btn-sm" >Delete</a>
                          
                         </div>
                       </div>
                     </div>
                   </div>
                       ';
+                    }
                 }
-            }
-
             ?>
 
-            
-
           </div> 
-
-
         	<hr>   
 
 			<!-- Page second heading -->

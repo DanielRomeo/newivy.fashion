@@ -22,7 +22,14 @@ session_start();
 		.jumbotron{
 			background: url("../images/imageglasseswoman.jpg");
 		}
+		a{
+			color: lightblue;
+		}
+		a:hover{
+			text-decoration: underline;
+		}
 	</style>
+	
 </head>
 <body>
 

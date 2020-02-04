@@ -103,8 +103,16 @@ echo $body; -->
 
 		<?php include_once("../templates/head.php"); ?>
 		<link rel="stylesheet" href="assets/main.css">
-		<link rel="canonical" href="https://blackrockdigital.github.io/startbootstrap-clean-blog-jekyll/2017/10/31/man-must-explore.html">
-		<link rel="alternate" type="application/rss+xml" title="Clean Blog" href="/startbootstrap-clean-blog-jekyll/feed.xml">
+		<!-- <link rel="canonical" href="https://blackrockdigital.github.io/startbootstrap-clean-blog-jekyll/2017/10/31/man-must-explore.html"> -->
+		<!-- <link rel="alternate" type="application/rss+xml" title="Clean Blog" href="/startbootstrap-clean-blog-jekyll/feed.xml"> -->
+		<style type="text/css">
+			a{
+				color: lightblue;
+			}
+			a:hover{
+				text-decoration: underline;
+			}
+		</style>
 </head>
 <body>
 

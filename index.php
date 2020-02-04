@@ -21,7 +21,7 @@
 
 		<div id="mainContainer" class="container">
 				
-			<h3 class="display-5">Do you want your fashion line to be on NEWIVY?  <a href="regitra.php">Register here</a></h3>
+			<h3 class="display-5">Do you want your fashion line to be on NEWIVY?  <a href="registra.php">Register here</a></h3>
 		</div>
 
 		<div style="width: 40%; height: 50px;" class="container">

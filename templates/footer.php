@@ -16,14 +16,14 @@
 	.mb10 { padding-bottom:15px ;}
 	.footer_ul_amrc { margin:0px ; list-style-type:none ; font-size:14px; padding:0px 0px 10px 0px ; }
 	.footer_ul_amrc li {padding:0px 0px 5px 0px;}
-	.footer_ul_amrc li a{ color:#CCC;}
-	.footer_ul_amrc li a:hover{ color:#fff; text-decoration:none;}
+	/*.footer_ul_amrc li a{ color:#CCC;}*/
+	/*.footer_ul_amrc li a:hover{ color:#fff; text-decoration:none;}*/
 	.fleft { float:left;}
 	.padding-right { padding-right:10px; }
 
 	.footer_ul2_amrc {margin:0px; list-style-type:none; padding:0px;}
 	.footer_ul2_amrc li p { display:table; }
-	.footer_ul2_amrc li a:hover { text-decoration:none;}
+	/*.footer_ul2_amrc li a:hover { text-decoration:none;}*/
 	.footer_ul2_amrc li i { margin-top:5px;}
 
 	.bottom_border { border-bottom:1px solid #323f45; padding-bottom:20px;}
@@ -37,7 +37,7 @@
 		margin-left: auto;
 	}
 	.foote_bottom_ul_amrc li { display:inline;}
-	.foote_bottom_ul_amrc li a { color:#999; margin:0 12px;}
+	/*.foote_bottom_ul_amrc li a { color:#999; margin:0 12px;}*/
 
 	.social_footer_ul { display:table; margin:15px auto 0 auto; list-style-type:none;  }
 	.social_footer_ul li { padding-left:20px; padding-top:10px; float:left; }
@@ -96,7 +96,7 @@
 								$postTitle = $var['title'];
 								
 
-								echo  " <p> <a href='localhost/newivy.fashion/blog/post.php?data=".$postId." '> $postTitle </a> </p>";
+								echo  " <li> <a href='localhost/newivy.fashion/blog/post.php?data=".$postId." '> $postTitle </a> </li>";
 							}
 						}
 					?>
