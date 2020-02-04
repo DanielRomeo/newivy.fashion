@@ -311,6 +311,59 @@ session_start();
 
         	</div> 
 
+          <!-- load all posts that they wrote -->
+
+          <!-- ------------------------------------------------------------------------------- -->
+
+          <!-- Page third heading -->
+          <div class="d-sm-flex align-items-center justify-content-between mb-4">
+            <h1 class="h3 mb-0 text-gray-800">All Your posts</h1>
+          </div>
+
+          <div class="row">
+
+            <?php
+
+              $sql = "SELECT * FROM posts WHERE uploadedby='$id' ";
+              $query = mysqli_query($db_conx, $sql);
+              if(mysqli_num_rows($query) > 0){
+                while($var = mysqli_fetch_assoc($query)){
+
+                  $postId = $var['id'];
+                  //$postimage = $['image'];
+                  $postTitle = $var['title'];
+                  $postbody = $var['body'];
+                  $postuploaddate = $var['uploaddate'];
+                  $postuploadedby = $var['uploadedby'];
+                  
+                  
+                  echo '
+                    <div class="col-xl-3 col-md-6 mb-4">
+                    <div class="card border-left-primary shadow h-100 py-2">
+                      <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                          <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">'.$postTitle.'</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800"></div>
+                          </div> <br />
+
+                          <a href="#" class="btn btn-warning btn-sm">Update</a>
+                          <a href="#" class="btn btn-danger btn-sm" >Delete</a>
+                         
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                      ';
+                }
+            }
+
+            ?>
+
+            
+
+          </div> 
+
 
         	<hr>   
 

@@ -110,11 +110,7 @@
 				<h5 class="headin5_amrc col_white_amrc pt2">Follow us</h5>
 				<!--headin5_amrc ends here-->
 
-				<ul class="footer_ul2_amrc">
-				<li><a href="#"><i class="fab fa-twitter fleft padding-right"></i> </a><p>Lorem Ipsum is simply dummy text of the printing...<a href="#">https://www.lipsum.com/</a></p></li>
-				<li><a href="#"><i class="fab fa-twitter fleft padding-right"></i> </a><p>Lorem Ipsum is simply dummy text of the printing...<a href="#">https://www.lipsum.com/</a></p></li>
-				<li><a href="#"><i class="fab fa-twitter fleft padding-right"></i> </a><p>Lorem Ipsum is simply dummy text of the printing...<a href="#">https://www.lipsum.com/</a></p></li>
-				</ul>
+				<a class="twitter-timeline" data-width="400" data-height="300" data-theme="dark" href="https://twitter.com/newivy_fashion?ref_src=twsrc%5Etfw">Tweets by newivy_fashion</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
 				<!--footer_ul2_amrc ends here-->
 			</div>
 		</div>

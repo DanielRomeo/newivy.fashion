@@ -152,5 +152,10 @@ echo $body; -->
 
 
 	<?php include_once("../templates/footer.php"); ?>
+
+	<script type="text/javascript">
+		
+		
+	</script>
 </body>
 </html>

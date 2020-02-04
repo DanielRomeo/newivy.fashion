@@ -23,6 +23,12 @@
 				
 			<h3 class="display-5">Do you want your fashion line to be on NEWIVY?  <a href="regitra.php">Register here</a></h3>
 		</div>
+
+		<div style="width: 40%; height: 50px;" class="container">
+			<a href="https://twitter.com/newivy_fashion?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @newivy_fashion</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+			
+		</div>
 	</div>
 
 	<?php include_once("templates/footer.php"); ?>

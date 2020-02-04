@@ -56,10 +56,6 @@ session_start();
 		</div>
 	
 
-		<div class="">
-
-		</div>
-
 		<?php 
 			include_once("../includes/db_conx.php");
 
@@ -100,10 +96,33 @@ session_start();
 				}
 			}
 		?>
+	</div> <!-- end of container -->
 
-		
+	<div class="container">
+		<!-- where my pagination lays: -->
+		<div class="table-responsive" id="pagination_data">
+
+		</div>
+
 	</div>
 
 	<?php include_once("../templates/footer.php"); ?>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			
+			function load_data(page){
+				$.ajax({
+					url: "pagination.php",
+					method: "POST",
+					data: {page:page},
+					success:function(data){
+						$('#pagination_data').html(data);
+					}
+				})
+			}
+
+		});
+	</script>
 </body>
 </html>
