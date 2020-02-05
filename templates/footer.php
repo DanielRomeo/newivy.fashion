@@ -119,9 +119,9 @@
 
 	<div class="container">
 		<ul class="foote_bottom_ul_amrc">
-			<li><a href="/">Home</a></li>
-			<li><a href="/about.php">About</a></li>
-			<li><a href="/blog.php">Blog</a></li>
+			<li><a href="index.php">Home</a></li>
+			<li><a href="registra.php">About</a></li>
+			<li><a href="blog.php">Blog</a></li>
 		</ul>
 
 		<p class="text-center">Want your fashion line to be on NEW IVY? <a href="registra.php">Register here</a></p>
@@ -131,9 +131,9 @@
 		<p class="text-center">Copyright @2020 | NEWIVYFASHION</p>
 
 		<ul class="social_footer_ul">
-			<li><a href="http://webenlance.com"><i class="fab fa-twitter"></i></a></li>
-			<li><a href="http://webenlance.com"><i class="fab fa-linkedin"></i></a></li>
-			<li><a href="http://webenlance.com"><i class="fab fa-instagram"></i></a></li>
+			<li><a href="https://twitter.com/newivy_fashion"><i class="fab fa-twitter"></i></a></li>
+			<!-- <li><a href="http://webenlance.com"><i class="fab fa-youtube"></i></a></li> -->
+			<li><a href="https://www.instagram.com/newivy.fashion/"><i class="fab fa-instagram"></i></a></li>
 		</ul>
 		<!--social_footer_ul ends here-->
 	</div>
