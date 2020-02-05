@@ -6,7 +6,12 @@
 	<?php include_once("templates/head.php"); ?>
 
 	<!-- custom footer for the registra page: -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" 
+	integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
 	<link rel="stylesheet" type="text/css" href="css/footerforregistra.css">
+
+	<link rel="stylesheet" type="text/css" href="css/registra.css">
 
 	<style type="text/css">
 		html,body{
@@ -27,22 +32,52 @@
 		    bottom: 0;
 		    width: 100%;
 		}
+
 	</style>
 </head>
 <body>
 
 	<?php include_once("templates/header.php"); ?>
 
-	<div class="container">
-	
+	<!--  -->
 
-		<div class="">
-			<h2>Home page. welcome</h2>
-		</div>
+	<!--================ start banner Area =================-->
+	<section class="home-banner-area">
+		<div class="container">
+			<div class="row justify-content-end fullscreen">
+				<div class="col-lg-6 col-md-12 home-banner-left d-flex fullscreen align-items-center">
+					<div>
+						<h1 class="">
+							Start your fashion<span> Ecommerce</span>
+							experience with us. <br>
+						</h1>
+						<p class="mx-auto mb-40">
+							NEWIVY IS AN AUTHORISED ONLINE FASHION RETAILER.
+						</p>
+						<a href="#" class="primary-btn">Read More about us</a>
+
+						<a href="#" class="primary-btn">Register Here</a>
+
+						
+					</div>
+				</div>
+
+				<!-- image -col 6 -->
+				<div class="col-lg-6 col-md-12 no-padding home-banner-right d-flex fullscreen align-items-end">
+					<img class="img-fluid" src="images/index.png" alt="">
+				</div>
+			</div>
+		</div> <!-- end of container -->
+	</section>
+	<!--================ End banner Area =================-->
+
+	<div style="min-height: 600px;" class="container">
+		
+		
 
 	</div>
 
-	<?php //include_once("templates/footer.php"); ?>
+	<!--  -->
 
 	<!--footer starts from here-->
 	<footer class="footer">
@@ -57,7 +92,6 @@
 			<p class="text-center">Want your fashion line to be on NEW IVY? <a href="registra.php">Register here</a></p>
 
 
-			<!--foote_bottom_ul_amrc ends here-->
 			<p class="text-center">Copyright @2020 | NEWIVYFASHION</p>
 
 			<ul class="social_footer_ul">
@@ -65,7 +99,6 @@
 				<li><a href="http://webenlance.com"><i class="fab fa-linkedin"></i></a></li>
 				<li><a href="http://webenlance.com"><i class="fab fa-instagram"></i></a></li>
 			</ul>
-			<!--social_footer_ul ends here-->
 		</div>
 	</footer>
 
