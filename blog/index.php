@@ -149,8 +149,8 @@
 	<!-- pagination will go here: -->
 	<div style="width:100; text-align: center;" class="container">
 
-		<nav aria-label="Page navigation example">
-		  <ul class="pagination">
+		<nav aria-label="Page navigation example ">
+		  <ul class="pagination justify-content-center">
 		    
 		    <?php
 				for($page =1; $page <= $number_of_pages; $page++){

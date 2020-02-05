@@ -32,6 +32,22 @@
 		    bottom: 0;
 		    width: 100%;
 		}
+		.modal{
+			border-radius: 0px;
+			font-family: sans-serif;
+		}
+		.modal-title{
+			font-family: sans-serif;
+		}
+		.modal-body{
+
+		}
+		.modal-body input{
+			border-radius: 0px;
+		}
+		.close-modal{
+			border-radius: 0px;
+		}
 
 	</style>
 </head>
@@ -54,9 +70,9 @@
 						<p class="mx-auto mb-40">
 							NEWIVY IS AN AUTHORISED ONLINE FASHION RETAILER.
 						</p>
-						<a href="#" class="primary-btn">Read More about us</a>
+						<a data-toggle="modal" data-target="#exampleModal2" href="#" class="primary-btn">Read More about us</a>
 
-						<a href="#" class="primary-btn">Register Here</a>
+						<a  data-toggle="modal" data-target="#exampleModal" href="#" class="primary-btn">Register Here</a>
 
 						
 					</div>
@@ -102,8 +118,86 @@
 		</div>
 	</footer>
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	<!-- modal starts here -->
+
+
+		<!-- modal for registering -->
+		<div class="modal fade bd-example-modal-lg" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		  <div class="modal-dialog modal-lg" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <h5 class="modal-title" id="exampleModalLabel">Register to become a Seller!</h5>
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          <span aria-hidden="true">&times;</span>
+		        </button>
+		      </div>
+		      <div class="modal-body">
+
+		        <div class="container">
+		      		<p>As you know, we haven't launced yet. However, our blog is fully active. For now, we want you to register in order for you to get notified whenever we release our latest blog posts and also, <b>Keep you informed on the date of the NEW IVY FASHION ECOMMERCE LAUNCH!</b></p> 
+
+		      		<br>
+
+		      		<form class="">
+
+		      			<p class="text-muted">We will not share any of your information with anyone else!</p>
+
+		      			<div class="form-item">
+		      				<label>Enter Name</label>
+		      				<input type="email" class="form-control" name="">
+
+		      				<label>Enter Cell number(optional)</label>
+		      				<input type="email" class="form-control" name="" placeholder="eg. +27 555 5555">
+
+		      				<label>Enter your email:</label>
+		      				<input type="email" class="form-control" name="">
+
+		      				<label>Verify your email:</label>
+		      				<input type="email" class="form-control" name="">	
+		      			</div>
+
+		      			<br>
+
+		      			<button style="border-radius: 0px;" type="button" class="btn btn-primary btn-sm">Save and Submit </button>
+
+		      		</form>	
+		      	</div>
+
+
+		      </div>
+		      
+		    </div>
+		  </div>
+		</div>
+
+		<!-- second modal for Read more about us ==============================================================-->
+		<div class="modal fade bd-example-modal-lg" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+		  <div class="modal-dialog modal-lg" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <h5 class="modal-title" id="exampleModalLabel">About NEWIVY.FASHION</h5>
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          <span aria-hidden="true">&times;</span>
+		        </button>
+		      </div>
+		      <div class="modal-body">
+		        		
+		      	<div class="container">
+		      		<p>New Ivy is an authorised online fashion retailer, tailored specifically to bring you(the brand owner) the best ecommrece selling experience we can.</p> 	
+		      	</div>
+
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-primary close-modal" data-dismiss="modal">Close</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+
+	<!-- modal ends here -->
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </body>
 </html>
