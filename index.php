@@ -1,150 +1,165 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
+
 <head>
-	<title>NewIvy!</title>
+    <title>Collapsible sidebar using Bootstrap 4</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" 
+integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/index.css">
 
-	<?php include_once("templates/head.php"); ?>
-	<link rel="stylesheet" type="text/css" href="css/index.css">
-	<style type="text/css">
-		.card-img-top {
-		    width: 100%;
-		    height: 15vw;
-		    object-fit: cover;
-		}
-		#readBlogButton{
-			border-radius: 0px;
-
-		}
-		.jumbotron{
-			background: url("../images/imageglasseswoman.jpg");
-		}
-		a{
-			color: lightblue;
-		}
-		a:hover{
-			text-decoration: underline;
-		}
-	</style>
 </head>
+
 <body>
 
-	<div id="mainBanner" class="">
-		
-		<?php include_once("templates/header.php"); ?>
+    <div class="wrapper">
 
 
-		<div id="firstContainer" class="container">
-			<h1 class="display-3">NEW IVY FASHION</h1> <br/>
+        <!-- start of navigation====================================================-->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3>NEWIVY</h3>
+            </div>
 
-		</div>
-		<p align="center">NEWIVY IS A FASHION SITE & COMING SOON. BROWSE OUR FASHION INTESIVE BLOG <a href="blog/">HERE</a></p>
+            <ul class="list-unstyled components">
+                <!-- <li class="active">
+                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
+                    <ul class="collapse list-unstyled" id="homeSubmenu">
+                        <li>
+                            <a href="#">Home 1</a>
+                        </li>
+                        <li>
+                            <a href="#">Home 2</a>
+                        </li>
+                        <li>
+                            <a href="#">Home 3</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">About</a>
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li>
+                            <a href="#">Page 1</a>
+                        </li>
+                        <li>
+                            <a href="#">Page 2</a>
+                        </li>
+                        <li>
+                            <a href="#">Page 3</a>
+                        </li>
+                    </ul>
+                </li> -->
+                <li>
+                    <a href="#">HOME</a>
+                </li>
+                <li>
+                    <a href="#">ABOUT</a>
+                </li>
+                <li>
+                    <a href="#">BLOG</a>
+                </li>
+                <li>
+                    <a href="#">REGISTER TO BE A RESELLER</a>
+                </li>
+            </ul>
 
-		<div id="mainContainer" class="container">
-				
-			<h3 class="display-5">Do you want your fashion line to be on NEWIVY?  <a href="registra.php">Register here</a></h3>
-		</div>
+            <ul class="list-unstyled CTAs">
+                <!-- <li>
+                    <a href="https://bootstrapious.com/tutorial/files/sidebar.zip" class="download">Download source</a>
+                </li>
+                <li>
+                    <a href="https://bootstrapious.com/p/bootstrap-sidebar" class="article">Back to article</a>
+                </li> -->
 
-		<div style="width: 40%; height: 50px;" class="container">
-			<a href="https://twitter.com/newivy_fashion?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @newivy_fashion</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-		</div>
-	</div>
+            </ul>
 
-	<!-- START OF FOOTER (INCLUDES STYLING)=============================================================================== -->
+            <div class="container">
+                @NEWIVY.FASHION
+            </div>
 
-
-	<!--footer starts from here-->
-	<footer class="footer">
-		<div class="container bottom_border">
-
-			<div class="row">
-				<div class=" col-sm-4 col-md col-sm-4  col-12 col">
-					<h5 class="headin5_amrc col_white_amrc pt2">Find us</h5>
-					<!--headin5_amrc-->
-					<p class="mb10">NEWIVY.FASHION is an authorised fashion retailer.</p>
-					<p><i class="fa fa fa-envelope"></i> newivyfashion@gmail.com  </p>
-				</div>
-
-
-				<div class=" col-sm-4 col-md  col-6 col">
-					<h5 class="headin5_amrc col_white_amrc pt2">Quick links</h5>
-					
-					<ul class="footer_ul_amrc">
-					<li><a href="http://webenlance.com">Home </a></li>
-					<li><a href="http://webenlance.com">about</a></li>
-					<li><a href="http://webenlance.com">Blog</a></li>
-					<li><a href="http://webenlance.com">Register to become a retailer</a></li>
-					</ul>
-				</div>
-
-
-				<div class=" col-sm-4 col-md  col-6 col">
-					<h5 class="headin5_amrc col_white_amrc pt2">Latest blog posts</h5>
-
-					<ul class="footer_ul_amrc">
-
-						<?php 
-							include_once("includes/db_conx.php");
-
-							$sql = "SELECT * FROM posts LIMIT 5";
-							$query = mysqli_query($db_conx, $sql);
-							if(mysqli_num_rows($query) > 0){
-								while($var = mysqli_fetch_assoc($query)){
-
-									$postId = $var['id'];
-									$postTitle = $var['title'];
-									
-
-									echo  " <li> <a href='localhost/newivy.fashion/blog/post.php?data=".$postId." '> $postTitle </a> </li>";
-								}
-							}
-						?>
-						
-					</ul>
-					<!--footer_ul_amrc ends here-->
-				</div>
+        </nav>
+        <!-- end of navigation======================================================= -->
 
 
-				<div class=" col-sm-4 col-md  col-12 col">
-					<h5 class="headin5_amrc col_white_amrc pt2">Follow us</h5>
-					<!--headin5_amrc ends here-->
-
-					<a class="twitter-timeline" data-width="400" data-height="300" data-theme="dark" href="https://twitter.com/newivy_fashion?ref_src=twsrc%5Etfw">Tweets by newivy_fashion</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
-					<!--footer_ul2_amrc ends here-->
-				</div>
-			</div>
-		</div>
 
 
-		<div class="container">
-			<ul class="foote_bottom_ul_amrc">
-				<li><a href="index.php">Home</a></li>
-				<li><a href="registra.php">About</a></li>
-				<li><a href="blog.php">Blog</a></li>
-			</ul>
+        <!-- start of content site================================================== -->
+        <div id="content">
 
-			<p class="text-center">Want your fashion line to be on NEW IVY? <a href="registra.php">Register here</a></p>
+            <div align="center" class="container">
+                <h1 class="display-3">NEWIVY.FASHION</h1>
+            </div>
+
+            <nav id="contentNavbar" class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="navbar-btn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+
+                    
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <div class="ml-auto">
+                        <p>We <i class="fas fa-heart"></i> Fashion</p>  
+                    </div>
+
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><i class="fab fa-twitter"></i></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><i class="fab fa-instagram"></i></a>
+                            </li>
+                        </ul>
+                        
+                        
+                    </div>
+                </div>
+            </nav>
+            
+            
+            <div style="background: url('images/imagewhitewalls.jpg') center no-repeat;" class="container-fluid">
+                
+            </div>
+            
+
+            <div class="line"></div>
+
+            <h3>Lorem Ipsum Dolor</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+        <!-- end of content side================================================== -->
+
+    </div>
 
 
-			<!--foote_bottom_ul_amrc ends here-->
-			<p class="text-center">Copyright @2020 | NEWIVYFASHION</p>
-
-			<ul class="social_footer_ul">
-				<li><a href="https://twitter.com/newivy_fashion"><i class="fab fa-twitter"></i></a></li>
-				<!-- <li><a href="http://webenlance.com"><i class="fab fa-youtube"></i></a></li> -->
-				<li><a href="https://www.instagram.com/newivy.fashion/"><i class="fab fa-instagram"></i></a></li>
-			</ul>
-			<!--social_footer_ul ends here-->
-		</div>
-	</footer>
-
-	<!-- ==END OF FOOTER=================================================================== -->
-
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
 
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+                $(this).toggleClass('active');
+            });
+        });
+    </script>
 </body>
+
 </html>
