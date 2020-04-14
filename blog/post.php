@@ -101,54 +101,37 @@ echo $body; -->
 <head>
 	<title>NewIvy!</title>
 
-		<?php include_once("../templates/head.php"); ?>
-		<link rel="stylesheet" href="assets/main.css">
-		<!-- <link rel="canonical" href="https://blackrockdigital.github.io/startbootstrap-clean-blog-jekyll/2017/10/31/man-must-explore.html"> -->
-		<!-- <link rel="alternate" type="application/rss+xml" title="Clean Blog" href="/startbootstrap-clean-blog-jekyll/feed.xml"> -->
-		<style type="text/css">
-			a{
-				color: lightblue;
-			}
-			a:hover{
-				text-decoration: underline;
-			}
-		</style>
+		<?php include_once("templates/head.php"); ?>
+		<link rel="stylesheet" href="../materialize/css/materialize.min.css">
+
+		<link rel="stylesheet" href="css/post.css">
 </head>
 <body>
 
-	<?php //include_once("../templates/header.php"); ?>
+	<!-- navbar  -->
+	<?php include_once("templates/header.php"); ?>
 
-	
-  	<!-- Page Header -->
-	<header class="masthead" style="background-image: url('../images/imageglasseswoman.jpg')">
-		<div class="overlay"></div>
+	<!-- the image: -->
+	<!-- row for the image -->
+	<div style="width:100%" class="row">
+		<img class="materialboxed" width="650" src="images/imagewhitewalls.jpg">
+	</div>
 
-		<div class="container">
-
-			<div class="row">
-
-				<div class="col-lg-8 col-md-10 mx-auto">
-					<div class="post-heading">
-						<h1><?php echo $postTitle; ?></h1>
-
-						<!-- <h2 class="subheading">Problems look mighty small from 150 miles up</h2> -->
-
-						<span class="meta">Posted by
-							<a href="#"><?php echo $userFirstName.' '.$userLastName; ?> &nbsp;</a>on <?php echo $postuploaddate ?> &middot;
-							<!-- <span class="reading-time" title="Estimated read time">4 min read</span> -->
-
-						</span>
-					</div>
-				</div>
-			</div>
-		</div>
-	</header>
-
-	<!-- end of page header: -->
+	<!-- this is the beginning of the blog content -->
 	<div class="container">
 
+		
+
+		<!-- title and dates ans stuff -->
+		<?php echo $postTitle; ?>
+		<span class="meta">Posted by
+			<a href="#"><?php echo $userFirstName.' '.$userLastName; ?> &nbsp;</a>on <?php echo $postuploaddate ?> &middot;
+			<!-- <span class="reading-time" title="Estimated read time">4 min read</span> -->
+
+		</span>
+
 		<div class="row">
-			<div class="col-lg-8 col-md-10 mx-auto">
+			<div class="col s12 m12 l12">
 
 				<?php 
 					$postboody = htmlspecialchars_decode($postbody);
@@ -159,11 +142,15 @@ echo $body; -->
 	</div>
 
 
-	<?php include_once("../templates/footer.php"); ?>
+	<?php include_once("templates/footer.php"); ?>
 
-	<script type="text/javascript">
-		
-		
+	<script>
+		// initialize the picture(s)
+		document.addEventListener('DOMContentLoaded', function() {
+			var elems = document.querySelectorAll('.slider');
+			var instances = M.Slider.init(elems, options);
+		});
 	</script>
+
 </body>
 </html>
