@@ -38,22 +38,22 @@
 					<!-- facebook -->
 					<a href="#">
 						<span class="fa-stack fa-lg">
-							<i class="fa fa-circle fa-stack-2x"></i>
-							<i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+							<i style="color: white;"" class="fa fa-circle fa-stack-2x"></i>
+							<i style="color: black;" class="fab fa-twitter fa-stack-1x fa-inverse"></i>
 						  </span>
 					</a>
 					<!-- twitter -->
 					<a href="#">
 						<span class="fa-stack fa-lg">
-							<i class="fa fa-circle fa-stack-2x"></i>
-							<i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+							<i  style="color: white;" class="fa fa-circle fa-stack-2x"></i>
+							<i style="color: black;" class="fab fa-instagram fa-stack-1x fa-inverse"></i>
 						  </span>
 					</a>
 					<!-- instagram -->
 					<a href="#">
 						<span class="fa-stack fa-lg">
-							<i class="fa fa-circle fa-stack-2x"></i>
-							<i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+							<i style="color: white;" class="fa fa-circle fa-stack-2x"></i>
+							<i style="color: black;" class="fab fa-facebook fa-stack-1x "></i>
 						  </span>
 					</a>	  
 				</div>
