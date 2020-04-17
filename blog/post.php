@@ -113,20 +113,26 @@ echo $body; -->
 
 	<!-- the image: -->
 	<!-- row for the image -->
+
 	<div style="width:100%" class="row">
-		<img class="materialboxed" width="650" src="images/imagewhitewalls.jpg">
+
+
+		<div class="container">
+			<h1><?php echo $postTitle; ?></h1>
+
+			<img class="materialboxed" width="650" src="images/imagewhitewalls.jpg">
+
+			<hr style="color: lightgrey;">
+		</div>
 	</div>
 
 	<!-- this is the beginning of the blog content -->
 	<div class="container">
 
-		
-
 		<!-- title and dates ans stuff -->
-		<?php echo $postTitle; ?>
 		<span class="meta">Posted by
-			<a href="#"><?php echo $userFirstName.' '.$userLastName; ?> &nbsp;</a>on <?php echo $postuploaddate ?> &middot;
-			<!-- <span class="reading-time" title="Estimated read time">4 min read</span> -->
+		<a href="#"><?php echo $userFirstName.' '.$userLastName; ?> &nbsp;</a>on <?php echo $postuploaddate ?> &middot;
+		<!-- <span class="reading-time" title="Estimated read time">4 min read</span> -->
 
 		</span>
 
@@ -139,6 +145,36 @@ echo $body; -->
 				?>
 			</div>
 		</div>
+	</div>
+
+	<!-- display of the blogger information: -->
+	<div class="container">
+		<div class="row">
+			<div class="col s12 m7">
+			    <h2 class="header">Horizontal Card</h2>
+			    <div class="card horizontal">
+
+			      <div class="card-image">
+			        <img src="images/imagewhitewalls.jpg">
+
+			        <div class="container">
+			        	<p>socila icons here</p>
+			        </div>
+			      </div>
+
+			      <div class="card-stacked">
+			        <div class="card-content">
+			        	<span class="card-title">Danilson Mamps</span>
+			          	<p>Hey my name is Danielson Mamps and i am the CTO of Newivy.fashion. I enjoy writing blogs on the website as well. primarily becasue i also enjoy fashion alot, thats probably why i co-founded this organisation right? check out my profile and socila links for mor about me.</p>
+			        </div>
+
+			        <div class="card-action">
+			          <a href="#">My profile page</a>
+			        </div>
+			      </div>
+			    </div>
+			</div>
+		</div>	
 	</div>
 
 
