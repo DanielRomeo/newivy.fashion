@@ -22,6 +22,19 @@
 	$sql = "SELECT * FROM posts LIMIT ".$this_page_first_result. ','.$results_per_page;
 	$paginationResult = mysqli_query($db_conx, $sql);
 	/* end o pagination code:*/ 
+
+
+	// get post with the most views and display as featured post:
+	$sql = "SELECT * FROM posts ORDER BY uploaddate DESC LIMIT 3 ";
+	$query = mysqli_query($db_conx, $sql);
+	if($query == TRUE){
+	}else{
+		echo("Error description: " . mysqli_error($db_conx));
+	}
+	/*
+		finish this off in the morning:
+
+	*/
 	
 ?>
 
@@ -39,33 +52,10 @@
 
 	<div class="container">
 		<div class="row">
-			
-			<div class="col s12">
-				<div class="card-panel  ">
-					<div class="card-content">
-						<p>Featured Blog posts | Most popular</p>	
-					</div>
-				</div>
-			</div>
+		
 			
 
-			<!-- display 2 of the most popular posts -->
-
-			<div class="col s12 m6 l6">
-				<div  class="card hoverable featured-card">
-					<div  class="card-image">
-						<img src="images/imagewhitewalls.jpg">
-						<span class="card-title">Card Title</span>
-						<a href=" post.php?data='.$postId.' " class="btn-floating hoverable halfway-fab waves-effect waves-light red pulse"><i class="">R</i></a>
-					</div>
-
-					<div class="card-content truncation">
-						
-						<p class="truncate">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, aperiam assumenda. Sit sunt fugit, cum quo molestiae iusto doloremque nam dolorum laborum quod, doloribus laboriosam ipsum voluptates. Quia, sapiente id.</p>
-					</div>
-				</div>
-			</div>
-		</div>
+			
             
 		<!-- <hr /> -->
 
@@ -78,7 +68,7 @@
 			while($var = mysqli_fetch_assoc($paginationResult)){
 
 				$postId = $var['id'];
-				//$postimage = $['image'];
+				 $postimage = $var['image'];
 				$postTitle = $var['title'];
 				$postbody = $var['body'];
 				$postuploaddate = $var['uploaddate'];
@@ -111,7 +101,7 @@
 					<div class="col s12 m4 l4">
 						<div class="card hoverable">
 							<div class="card-image">
-								<img src="images/imagewhitewalls.jpg">
+								<img src="images/'.$postimage.'">
 								
 								<a href=" post.php?data='.$postId.' " class="btn-floating hoverable halfway-fab waves-effect waves-light red"><i class="">R</i></a>
 							</div>
