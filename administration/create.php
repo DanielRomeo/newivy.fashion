@@ -1,4 +1,4 @@
-<?php// echo //exec('whoami'); ?>
+<?php //echo exec('whoami'); ?>
 
 <?php
 	
@@ -32,12 +32,12 @@
 		
 
 		//path to store the uploaded image:
-		// $target = "images/".basename($_FILES['image']['name']);
-		// $image = $_FILES['image']['name'];
-		// $fileTempLocimage = $_FILES["image"]["tmp_name"];
+		$target = "images/".basename($_FILES['image']['name']);
+		$image = $_FILES['image']['name'];
+		$fileTempLocimage = $_FILES["image"]["tmp_name"];
 
-    $image = "samamma";
-    echo $username;
+        // $image = "samamma";
+        echo $username;
 
 
 		// create post code:
@@ -52,9 +52,12 @@
       echo("Error description: " . mysqli_error($db_conx));
 		}
 
-		// if (move_uploaded_file($fileTempLocimage, "../blog/images/$image")) {
-		//    }else{
-		//    }
+		if (move_uploaded_file($fileTempLocimage, "../blog/images/$image")) {
+		   }else{
+		   }
+
+        // show alert of success:
+           
 	}
 	
 ?>
@@ -118,11 +121,11 @@
                       	<textarea id="postField" name="body" rows="5" cols="5" type="text" class="form-control form-control-user" ></textarea>
                     </div>
 
-                    <!-- <input type="hidden" name="size" value="1000000">
-                    <div class="form-group">
-					    <label for="image">Upload Cover Image</label>
-					    <input type="file" name="image" class="form-control-file" id="image">
-					</div> -->
+                        <input type="hidden" name="size" value="1000000"/>
+                        <div class="form-group">
+      					    <label for="image">Upload Cover Image</label>
+      					    <input type="file" name="image" class="form-control-file" id="image"/>
+      					</div>
 
 
 
