@@ -24,7 +24,7 @@
 		$row = mysqli_fetch_array($query);
 
 		$postId = $row['id'];
-		//$postimage = $['image'];
+		$postimage = $row['image'];
 		$postTitle = $row['title'];
 		$postbody = $row['body'];
 		$postuploaddate = $row['uploaddate'];
@@ -111,16 +111,14 @@ echo $body; -->
 	<!-- navbar  -->
 	<?php include_once("templates/header.php"); ?>
 
-	<!-- the image: -->
 	<!-- row for the image -->
-
 	<div style="width:100%" class="row">
 
 
 		<div class="container">
 			<h1><?php echo $postTitle; ?></h1>
-
-			<img class="materialboxed" width="650" src="images/imagewhitewalls.jpg">
+			<h6>By: <?php echo $userFirstName.' '.$userLastName; ?>  </h6>
+			<img class="materialboxed" width="650" src="images/<?php echo $postimage ?>">
 
 			<hr style="color: lightgrey;">
 		</div>
@@ -129,12 +127,6 @@ echo $body; -->
 	<!-- this is the beginning of the blog content -->
 	<div class="container">
 
-		<!-- title and dates ans stuff -->
-		<span class="meta">Posted by
-		<a href="#"><?php echo $userFirstName.' '.$userLastName; ?> &nbsp;</a>on <?php echo $postuploaddate ?> &middot;
-		<!-- <span class="reading-time" title="Estimated read time">4 min read</span> -->
-
-		</span>
 
 		<div class="row">
 			<div class="col s12 m12 l12">
@@ -148,7 +140,7 @@ echo $body; -->
 	</div>
 
 	<!-- display of the blogger information: -->
-	<div class="container">
+	<!-- <div class="container">
 		<div class="row">
 			<div class="col s12 m7">
 			    <h2 class="header">Horizontal Card</h2>
@@ -175,7 +167,7 @@ echo $body; -->
 			    </div>
 			</div>
 		</div>	
-	</div>
+	</div> -->
 
 
 	<?php include_once("templates/footer.php"); ?>

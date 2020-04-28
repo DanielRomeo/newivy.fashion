@@ -377,7 +377,7 @@ session_start();
                           </div> <br />
 
                           <a href="edit.php?='.$postId.'" class="btn btn-warning btn-sm">Update</a>
-                          <a href="delete.php?='.$postId.'" class="btn btn-danger btn-sm" >Delete</a>
+                          <a href="delete.php?id='.$postId.'" class="btn btn-danger btn-sm" >Delete</a>
                          
                         </div>
                       </div>
@@ -433,17 +433,8 @@ session_start();
 					}
 
 				?>
-
-
-			
-
 			</div> 
-
-
         </div><!-- /.container-fluid -->
-
-
-
       </div>
       <!-- End of Main Content -->
 
