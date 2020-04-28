@@ -267,7 +267,7 @@ session_start();
             </div>
 
             <!-- Earnings (Monthly) Card Example -->
-            <div class="col-xl-3 col-md-6 mb-4">
+            <!-- <div class="col-xl-3 col-md-6 mb-4">
               <div class="card border-left-info shadow h-100 py-2">
                 <div class="card-body">
                   <div class="row no-gutters align-items-center">
@@ -284,13 +284,14 @@ session_start();
                         </div>
                       </div>
                     </div>
+                    </div>
                     <div class="col-auto">
                       <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
+            </div> -->
 
             <!-- Pending Requests Card Example -->
             <div class="col-xl-3 col-md-6 mb-4">
@@ -367,7 +368,7 @@ session_start();
                   
                   
                   echo '
-                    <div class="col-xl-3 col-md-6 mb-4">
+                    <div class="col-xl-4 col-md-6 col-sm-12 mb-4">
                     <div class="card border-left-primary shadow h-100 py-2">
                       <div class="card-body">
                         <div class="row no-gutters align-items-center">
@@ -376,7 +377,7 @@ session_start();
                             <div class="h5 mb-0 font-weight-bold text-gray-800"></div>
                           </div> <br />
 
-                          <a href="edit.php?='.$postId.'" class="btn btn-warning btn-sm">Update</a>
+                          
                           <a href="delete.php?id='.$postId.'" class="btn btn-danger btn-sm" >Delete</a>
                          
                         </div>
