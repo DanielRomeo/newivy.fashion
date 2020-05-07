@@ -7,6 +7,14 @@
     
     */
 
+            // get post with the most views and display as featured post:
+    $sql = "SELECT * FROM posts ORDER BY uploaddate DESC LIMIT 3 ";
+    $query = mysqli_query($db_conx, $sql);
+    if($query == TRUE){
+    }else{
+        echo("Error description: " . mysqli_error($db_conx));
+    }
+
 
 ?>
 
